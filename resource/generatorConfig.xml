@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+	<classPathEntry location="\\190.168.1.1\public\Lonze\Works\genarator\lib\mysql-connector-java-5.1.23.jar" /> 
+  	<context id="context1" >
+		<commentGenerator type="org.mybatis.generator.internal.MyCommentGenerator">  
+	 	 	<!-- 是否去除自动生成的注释 true：是 ： false:否 -->  
+	  		<property name="suppressAllComments" value="false" />  
+	  		<property name="javaFileEncoding" value="UTF-8"/>
+		</commentGenerator>
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.145.40:3306/test" userId="root" password="123456" />
+		<!--
+	    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://190.168.1.2:3306/zms_sys" userId="dev" password="dev" />
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://190.168.1.2:3306/zms" userId="dev" password="dev" />
+	    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://190.168.1.2:3306/zms_bi" userId="dev" password="dev" />
+	    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://190.168.1.2:3306/zms_log" userId="dev" password="dev" />
+		-->
+		
+	    <javaModelGenerator targetPackage="dao.model" targetProject="D:\project\model" />
+	    <sqlMapGenerator targetPackage="dao.mapping" targetProject="D:\project\model" />
+	    <javaClientGenerator targetPackage="dao.mapper" targetProject="D:\project\model" type="XMLMAPPER" />
+	    
+	    
+    	<!-- 数据库表已经产生对应的映射文件 -->
+    	<!-- 老模型表 -->
+		<!--
+  		<table tableName="pri_rule" domainObjectName="PriRule" /> 
+  		<table tableName="pri_role" domainObjectName="PriRole" /> 
+  		<table tableName="pri_user_role" domainObjectName="PriUserRole" /> 
+  		<table tableName="pri_resource" domainObjectName="PriResource" /> 
+  		<table tableName="msg_sms_queue" domainObjectName="MsgSmsQueue" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+  		<table tableName="msg_email_queue" domainObjectName="MsgEmailQueue" />
+  		<table tableName="pri_user" domainObjectName="PriUser2" /> 
+	 	-->
+	 	
+	 	<!-- zms_log -->
+		<!--
+		<table tableName="log_operation" domainObjectName="LogOperation" /> 
+ 	  	<table tableName="log_url_request" domainObjectName="LogUrlRequest" /> 
+		-->
+		
+		<!-- zms_sys -->
+  		<!--
+  		<table tableName="bas_dictionary" domainObjectName="BasDictionary" /> 
+		<table tableName="bas_dict_type" domainObjectName="BasDictType" /> 
+  		<table tableName="pri_user" domainObjectName="PriUser" /> 
+		
+  		<table tableName="pri_online_user" domainObjectName="PriOnlineUser" /> 
+  		<table tableName="bas_sequence" domainObjectName="BasSequence" /> 
+  		<table tableName="bas_banner" domainObjectName="BasBanner" /> 
+  		<table tableName="msg_sms_limit" domainObjectName="MsgSmsLimit" /> 
+  		<table tableName="sys_message" domainObjectName="SysMessage" />
+  		-->
+  		
+  		<!-- zms_bus -->
+	 	<!-- 
+  		<table tableName="act_cp_model" domainObjectName="ActCpModel" />
+  		<table tableName="act_ex_code" domainObjectName="ActExCode" />
+  		<table tableName="act_info" domainObjectName="ActInfo" />
+  		<table tableName="act_record" domainObjectName="ActRecord" />
+  		<table tableName="act_red_packets" domainObjectName="ActRedPackets" />
+  		<table tableName="act_sign" domainObjectName="ActSign" />
+  		<table tableName="act_voucher" domainObjectName="ActVoucher" />
+  		<table tableName="bid_comments" domainObjectName="BidComments" />
+  		<table tableName="bid_compound" domainObjectName="BidCompound" />
+  		<table tableName="bid_list" domainObjectName="BidList" />
+  		<table tableName="com_impeach" domainObjectName="ComImpeach" />
+  		<table tableName="file_info" domainObjectName="FileInfo" />
+  		<table tableName="iv_list" domainObjectName="IvList" />
+  		<table tableName="ord_info" domainObjectName="OrdInfo" />
+  		<table tableName="ord_record" domainObjectName="OrdRecord" />
+  		<table tableName="sta_mediar" domainObjectName="StaMediar" />
+  		<table tableName="usr_account" domainObjectName="UsrAccount" />
+  		<table tableName="usr_account_list" domainObjectName="UsrAccountList" />
+  		<table tableName="usr_cashing" domainObjectName="UsrCashing" />
+  		<table tableName="usr_charge" domainObjectName="UsrCharge" />
+  		<table tableName="usr_com_info" domainObjectName="UsrComInfo" />
+  		<table tableName="usr_count" domainObjectName="UsrCount" />
+  		<table tableName="usr_verify_code" domainObjectName="UsrVerifyCode" /> 
+  		<table tableName="usr_zmtr_count" domainObjectName="UsrZmtrCount" />
+  		<table tableName="usr_zmtr_info" domainObjectName="UsrZmtrInfo" />
+  		<table tableName="usr_zmtr_star" domainObjectName="UsrZmtrStar" />
+  		<table tableName="usr_zmtr_tag" domainObjectName="UsrZmtrTag" />
+  		<table tableName="pay_notify_log" domainObjectName="PayNotifyLog" /> 
+  		<table tableName="pay_request_log" domainObjectName="PayRequestLog" /> 
+  		<table tableName="iv_info" domainObjectName="IvInfo" />
+  		<table tableName="bid_info" domainObjectName="BidInfo" />
+  		<table tableName="usr_zmtr_bid1" domainObjectName="UsrZmtrBid1" />
+  		-->
+  		<table tableName="edu_edmo_pms_user" domainObjectName="PmsUser" />
+  		
+  		
+  		
+  		<!-- zms_bi -->
+  		<!--
+  		<table tableName="bas_counter" domainObjectName="BasCounter" />
+  		<table tableName="bi_task_list" domainObjectName="BiTaskList" />
+  		<table tableName="bi_user_new" domainObjectName="BiUserNew" />
+  		<table tableName="import_data_flag" domainObjectName="ImportDataFlag" />
+  		<table tableName="log_point_list" domainObjectName="LogPointList" />
+  		<table tableName="log_point_op" domainObjectName="LogPointOp" />
+  		<table tableName="zms_value_week" domainObjectName="ZmsValueWeek" />
+  		-->
+  	</context>
+</generatorConfiguration>
